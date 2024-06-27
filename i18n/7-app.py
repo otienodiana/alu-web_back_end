@@ -9,7 +9,7 @@ import pytz
 from pytz.exceptions import UnknownTimeZoneError
 from babel import Locale
 from babel.support import Translations
-from flask_babel import Babel
+from flask_babel import Babel # type: ignore
 
 app = Flask(__name__)
 babel = Babel(app)

@@ -4,7 +4,7 @@
 """
 from os import getenv
 from flask import Flask, render_template
-from flask_babel import Babel
+from flask_babel import Babel # type: ignore
 
 
 app = Flask(__name__)
