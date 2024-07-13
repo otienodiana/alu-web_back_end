@@ -1,0 +1,1 @@
+This project is on ES6 Promises fundementals
