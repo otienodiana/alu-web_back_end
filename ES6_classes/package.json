@@ -1,0 +1,12 @@
+{
+  "name": "es6_classes",
+  "version": "1.0.0",
+  "description": "My project on ES6 classes started on 19th July 2024",
+  "main": "0-classroom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
