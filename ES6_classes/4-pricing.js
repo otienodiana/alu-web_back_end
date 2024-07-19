@@ -1,9 +1,13 @@
-/* eslint-disable no-unused-vars */
 import Currency from './3-currency';
-/* eslint-enable no-unused-vars */
 
 export default class Pricing {
   constructor(amount, currency) {
+    if (typeof amount !== 'number' || isNaN(amount)) {
+      throw new TypeError('amount must be a valid number');
+    }
+    if (!(currency instanceof Currency)) {
+      throw new TypeError('currency must be an instance of Currency');
+    }
     this._amount = amount;
     this._currency = currency;
   }
@@ -13,6 +17,9 @@ export default class Pricing {
   }
 
   set amount(newAmount) {
+    if (typeof newAmount !== 'number' || isNaN(newAmount)) {
+      throw new TypeError('amount must be a valid number');
+    }
     this._amount = newAmount;
   }
 
@@ -21,6 +28,9 @@ export default class Pricing {
   }
 
   set currency(newCurrency) {
+    if (!(newCurrency instanceof Currency)) {
+      throw new TypeError('currency must be an instance of Currency');
+    }
     this._currency = newCurrency;
   }
 
@@ -29,6 +39,9 @@ export default class Pricing {
   }
 
   static convertPrice(amount, conversionRate) {
+    if (typeof amount !== 'number' || isNaN(amount) || typeof conversionRate !== 'number' || isNaN(conversionRate)) {
+      throw new TypeError('amount and conversionRate must be valid numbers');
+    }
     return amount * conversionRate;
   }
 }
