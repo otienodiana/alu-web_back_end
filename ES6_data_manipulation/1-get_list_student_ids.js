@@ -5,4 +5,3 @@ export default function getListStudentIds(arrayOfObjects) {
   }
   return arr;
 }
- 
